@@ -64,3 +64,17 @@ $dark-accent: #070A62;
   justify-content: center;
   align-items: center;
 }
+
+
+/******************/
+/*** Animations ***/
+/******************/
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

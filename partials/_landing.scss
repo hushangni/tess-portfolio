@@ -3,7 +3,31 @@
   text-align: center;
   color: $white;
   background: $dark-accent;
-
   @include flexCenter();
+
+
+  &-content {
+    position: relative;
+
+    h1,
+    p {
+      position: relative;
+      z-index: 1;
+      text-shadow:
+        2px 2px 1px $dark-accent,
+        -2px -2px 1px $dark-accent;
+
+    }
+  }
+
+  .line-sun {
+    fill: $primary;
+    position: absolute;
+    width: 175px;
+    left: -1%;
+    top: -27%;
+    z-index: 0;
+    animation: spin 15s linear infinite;
+  }
 
 }
