@@ -1,0 +1,9 @@
+.overall-nav {
+  position: fixed;
+  right: 0;
+
+  ul {
+    display: flex;
+    border: 1px solid $medium-warm;
+  }
+}

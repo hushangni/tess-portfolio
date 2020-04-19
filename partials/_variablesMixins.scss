@@ -1,0 +1,66 @@
+/**************/
+/*** Colors ***/
+/**************/
+$black: #282d4c;
+$white: #ffffff;
+
+$primary: #fcd47c;
+$secondary: #b2c8ff;
+
+$medium-neutral: #d8a689;
+$medium-warm: #b03c22;
+$medium-cool: #9aa4cf;
+$dark-cool: #515a88;
+$dark-accent: #070A62;
+
+/*************/
+/*** Fonts ***/
+/*************/
+// font-family: 'Playfair Display', serif;
+// font-family: 'Roboto', sans-serif;
+@mixin accent-regular() {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+}
+@mixin accent-medium() {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+}
+@mixin accent-semibold() {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+}
+@mixin accent-bold() {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+}
+
+@mixin primary-light() {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+@mixin primary-regular() {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+@mixin primary-medium() {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+
+/**************/
+/*** Mixins ***/
+/**************/
+// fontSize(sizeValue);
+@mixin fontSize($sizeValue){
+	font-size: $sizeValue * 1px;
+	font-size: ($sizeValue/10) * 1rem;
+}
+
+// flexCenter();
+@mixin flexCenter() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

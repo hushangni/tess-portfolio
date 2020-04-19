@@ -1,0 +1,9 @@
+.landing {
+  min-height: 100vh;
+  text-align: center;
+  color: $white;
+  background: $dark-accent;
+
+  @include flexCenter();
+
+}

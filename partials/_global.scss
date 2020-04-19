@@ -1,0 +1,66 @@
+ul,
+li {
+  list-style-type: none;
+  padding: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+.main-section {
+  display: flex;
+
+  header {
+    border: 1px solid $primary;
+    width: calc(100% / 3);
+    min-height: 100vh;
+    text-align: center;
+    padding: 50px;
+  }
+
+  .content {
+    border: 1px solid $secondary;
+    width: calc((100% / 3) * 2);
+    min-height: 100vh;
+    padding: 50px;
+  }
+}
+
+/******************/
+/*** Typography ***/
+/******************/
+body {
+  @include primary-light();
+  @include fontSize(16);
+}
+
+h1 {
+  @include accent-semibold();
+  @include fontSize(40);
+}
+
+h2 {
+  @include accent-semibold();
+  @include fontSize(50);
+}
+
+h3 {
+  @include primary-medium();
+  @include fontSize(20);
+}
+
+.tagline {
+  text-transform: uppercase;
+}
