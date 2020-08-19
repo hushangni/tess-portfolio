@@ -289,25 +289,70 @@ html {
   scroll-behavior: smooth;
 }
 
-.main-section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@media (min-width: 1080px) {
+  main {
+    height: 100vh;
+    overflow-y: scroll;
+    -ms-scroll-snap-type: y proximity;
+        scroll-snap-type: y proximity;
+  }
 }
 
 .main-section header {
-  border: 1px solid #fcd47c;
-  width: calc(100% / 3);
   min-height: 100vh;
-  text-align: center;
   padding: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
 }
 
 .main-section .content {
-  border: 1px solid #b2c8ff;
-  width: calc((100% / 3) * 2);
   min-height: 100vh;
-  padding: 50px;
+  padding: 50px 100px;
+}
+
+@media (min-width: 1080px) {
+  .main-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    scroll-snap-align: center;
+  }
+  .main-section header {
+    width: calc(100% / 3);
+  }
+  .main-section .content {
+    width: calc((100% / 3) * 2);
+    height: 100vh;
+    overflow: scroll;
+  }
+}
+
+.about header {
+  background: #515a88;
+  color: #ffffff;
+}
+
+.portfolio header {
+  background: #9aa4cf;
+  color: #ffffff;
+}
+
+.skills header {
+  background: #b5bde0;
+  color: #ffffff;
+}
+
+.contact header {
+  background: #c2cdeb;
+  color: #ffffff;
 }
 
 /******************/
@@ -345,9 +390,41 @@ h3 {
   text-transform: uppercase;
 }
 
+.mobile-icon {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  fill: #fcd47c;
+  width: 30px;
+  height: 38px;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.mobile-icon:hover, .mobile-icon:focus {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-filter: drop-shadow(3px 3px 4px #d8a689);
+          filter: drop-shadow(3px 3px 4px #d8a689);
+}
+
+@media (min-width: 1080px) {
+  .mobile-icon {
+    display: none;
+  }
+}
+
 .overall-nav {
   position: fixed;
   right: 0;
+  top: 105px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.overall-nav.active {
+  background: salmon;
 }
 
 .overall-nav ul {
@@ -393,4 +470,38 @@ h3 {
   z-index: 0;
   -webkit-animation: spin 15s linear infinite;
           animation: spin 15s linear infinite;
+}
+
+.tess-face {
+  position: absolute;
+  right: -75px;
+  top: 50px;
+  width: 150px;
+}
+
+.portfolio .content {
+  padding: 0;
+}
+
+.project {
+  height: 100vh;
+  border: 5px solid goldenrod;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer {
+  height: 100vh;
+  background: #cad;
 }

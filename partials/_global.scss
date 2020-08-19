@@ -19,24 +19,49 @@ html {
   scroll-behavior: smooth;
 }
 
+main {
+
+  @include breakPoint(desktop) {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y proximity;
+  }
+}
+
 .main-section {
-  display: flex;
 
   header {
-    border: 1px solid $primary;
-    width: calc(100% / 3);
     min-height: 100vh;
-    text-align: center;
     padding: 50px;
+    @include flexCenter();
+    position: relative;
   }
 
   .content {
-    border: 1px solid $secondary;
-    width: calc((100% / 3) * 2);
     min-height: 100vh;
-    padding: 50px;
+    padding: 50px 100px;
+  }
+
+  @include breakPoint(desktop) {
+    display: flex;
+    scroll-snap-align: center;
+  
+    header {
+      width: calc(100% / 3);
+    }
+
+    .content {
+      width: calc((100% / 3) * 2);
+      height: 100vh;
+      overflow: scroll;
+    }
   }
 }
+
+.about header { background: $dark-cool; color: $white; }
+.portfolio header { background: $medium-cool; color: $white; }
+.skills header { background: $light-medium-cool; color: $white;}
+.contact header { background: $light-cool; color: $white; }
 
 /******************/
 /*** Typography ***/

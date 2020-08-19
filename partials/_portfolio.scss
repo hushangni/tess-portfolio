@@ -1,0 +1,9 @@
+.portfolio .content {
+    padding:0;
+}
+.project {
+    height: 100vh;
+    border: 5px solid goldenrod;
+    @include flexCenter();
+    flex-direction: column;
+}
