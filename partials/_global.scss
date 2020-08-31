@@ -19,49 +19,49 @@ html {
   scroll-behavior: smooth;
 }
 
-main {
+.wrapper {
+  max-width: 1000px;
+  width: 85%;
+  margin: 0 auto;
+}
 
-  @include breakPoint(desktop) {
-    height: 100vh;
-    overflow-y: scroll;
-    scroll-snap-type: y proximity;
+button {
+  background: none;
+  border: none;
+  text-transform: uppercase;
+  border-radius: 4rem;
+  padding: 1.2rem 1.8rem 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.dark-button {
+  background: $dark-accent;
+  color: $white;
+  border: 2px solid $dark-accent;
+  &:hover {
+    background: $dark-cool;
+    border: 2px solid $dark-cool;
   }
 }
 
-.main-section {
-
-  header {
-    min-height: 100vh;
-    padding: 50px;
-    @include flexCenter();
-    position: relative;
-  }
-
-  .content {
-    min-height: 100vh;
-    padding: 50px 100px;
-  }
-
-  @include breakPoint(desktop) {
-    display: flex;
-    scroll-snap-align: center;
-  
-    header {
-      width: calc(100% / 3);
-    }
-
-    .content {
-      width: calc((100% / 3) * 2);
-      height: 100vh;
-      overflow: scroll;
-    }
+.light-button {
+  color: $dark-accent;
+  border: 2px solid $dark-accent;
+  &:hover {
+    background: $dark-cool;
+    border: 2px solid $dark-cool;
+    color: white;
   }
 }
 
-.about header { background: $dark-cool; color: $white; }
-.portfolio header { background: $medium-cool; color: $white; }
-.skills header { background: $light-medium-cool; color: $white;}
-.contact header { background: $light-cool; color: $white; }
+.social-nav li {
+  transition: 0.3s;
+  &:hover,
+  &:focus {
+    transform: rotate(-15deg);
+  }
+}
 
 /******************/
 /*** Typography ***/
