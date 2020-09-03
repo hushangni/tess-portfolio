@@ -297,7 +297,7 @@ html {
 
 .wrapper {
   max-width: 1000px;
-  width: 85%;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -643,20 +643,42 @@ h3 {
 
 .project-accent-icon {
   position: absolute;
-  width: 75px;
-  right: -3.5rem;
-  top: -3.5rem;
+  width: 55px;
+  right: -2.5rem;
+  top: -2.5rem;
   z-index: 2;
 }
 
+@media (min-width: 900px) {
+  .project-accent-icon {
+    width: 75px;
+    right: -3.5rem;
+    top: -3.5rem;
+  }
+}
+
 .writing-icon {
-  width: 65px;
-  top: -3rem;
-  right: -3rem;
+  width: 40px;
+  top: -2rem;
+  right: -2rem;
+}
+
+@media (min-width: 900px) {
+  .writing-icon {
+    width: 65px;
+    top: -3rem;
+    right: -3rem;
+  }
 }
 
 .video-icon {
-  width: 70px;
+  width: 50px;
+}
+
+@media (min-width: 900px) {
+  .video-icon {
+    width: 70px;
+  }
 }
 
 .project-desc {
