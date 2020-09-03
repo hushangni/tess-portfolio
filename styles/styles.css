@@ -244,6 +244,12 @@ html {
 /**************/
 /*** Mixins ***/
 /**************/
+@media (max-width: 900px) {
+  .desktop-only {
+    display: none;
+  }
+}
+
 /******************/
 /*** Animations ***/
 /******************/
@@ -299,13 +305,16 @@ html {
   padding: 2rem 0;
 }
 
-@media (min-width: 1080px) {
+@media (min-width: 900px) {
   .main-section {
     padding: 4rem 0;
   }
 }
 
-button {
+.button, .dark-button, .light-button {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 1.4rem;
   background: none;
   border: none;
   text-transform: uppercase;
@@ -387,7 +396,7 @@ h3 {
   position: fixed;
   right: 20px;
   top: 20px;
-  fill: #fcd47c;
+  fill: #f8ca67;
   width: 30px;
   height: 38px;
   cursor: pointer;
@@ -402,7 +411,7 @@ h3 {
           filter: drop-shadow(3px 3px 4px #d8a689);
 }
 
-@media (min-width: 1080px) {
+@media (min-width: 900px) {
   .mobile-icon {
     display: none;
   }
@@ -414,6 +423,7 @@ h3 {
   top: 105px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  display: none;
 }
 
 .overall-nav.active {
@@ -455,7 +465,7 @@ h3 {
 }
 
 .landing .line-sun {
-  fill: #fcd47c;
+  fill: #f8ca67;
   position: absolute;
   width: 175px;
   left: -1%;
@@ -550,12 +560,31 @@ h3 {
 
 .about h2 {
   font-size: 3rem;
-  margin: 1rem 0;
+  margin: 1.5rem 0;
+  position: relative;
 }
 
 @media (min-width: 736px) {
   .about h2 {
     margin: 2.5rem 0;
+  }
+}
+
+.about h2::after {
+  content: "";
+  height: 2px;
+  width: 50px;
+  position: absolute;
+  background: #f8ca67;
+  bottom: -1.1rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+@media (min-width: 736px) {
+  .about h2::after {
+    bottom: -1.6rem;
   }
 }
 
@@ -597,9 +626,10 @@ h3 {
   margin-bottom: 6rem;
   background: #ffffff;
   color: #282d4c;
+  position: relative;
 }
 
-@media (min-width: 1080px) {
+@media (min-width: 900px) {
   .project {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -611,28 +641,75 @@ h3 {
   }
 }
 
+.project-accent-icon {
+  position: absolute;
+  width: 75px;
+  right: -3.5rem;
+  top: -3.5rem;
+  z-index: 2;
+}
+
+.writing-icon {
+  width: 65px;
+  top: -3rem;
+  right: -3rem;
+}
+
+.video-icon {
+  width: 70px;
+}
+
 .project-desc {
   margin: 5rem 2rem 6rem;
 }
 
+.project-desc h3 {
+  position: relative;
+}
+
+.project-desc h3::after {
+  content: "";
+  height: 2px;
+  width: 50px;
+  position: absolute;
+  background: #f8ca67;
+  bottom: -1rem;
+  left: 2.3rem;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+@media (min-width: 736px) {
+  .project-desc h3::after {
+    bottom: -1.2rem;
+  }
+}
+
 .project-pic {
-  background-image: url(../styles/assets/headshot.jpg);
-  background-size: cover;
+  background-image: url(../styles/assets/corona-placeholder.jpg);
+  background-size: 150%;
   background-position: center;
   position: relative;
   width: 100%;
+  -webkit-transition: 2s;
+  transition: 2s;
   height: 300px;
+}
+
+.project-pic:hover {
+  background-size: 170%;
 }
 
 .project-pic:hover .overlay {
   opacity: 1;
 }
 
-@media (min-width: 1080px) {
+@media (min-width: 900px) {
   .project-pic {
     width: 40%;
     -ms-flex-negative: 0;
         flex-shrink: 0;
+    height: auto;
   }
 }
 
@@ -657,10 +734,16 @@ h3 {
   transition: 0.3s;
 }
 
-@media (min-width: 1080px) {
+@media (min-width: 900px) {
   .project-pic .overlay {
     opacity: 0;
   }
+}
+
+.skills-used {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-style: italic;
 }
 
 footer {

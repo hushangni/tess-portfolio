@@ -13,6 +13,7 @@
     margin-bottom: 6rem;
     background: $white;
     color: $black;
+    position: relative;
 
     @include breakPoint(desktop) {
         flex-direction: row;
@@ -20,27 +21,67 @@
     }
 }
 
+.project-accent-icon {
+    position: absolute;
+    width: 75px;
+    right: -3.5rem;
+    top: -3.5rem;
+    z-index: 2;
+}
+
+.writing-icon {
+    width: 65px;
+    top: -3rem;
+    right: -3rem;
+}
+
+.video-icon {
+    width: 70px;
+}
+
 .project-desc {
     margin: 5rem 2rem 6rem;
+
+    h3 {
+        position: relative;
+        &::after {
+            content: "";
+            height: 2px;
+            width: 50px;
+            position: absolute;
+            background: $primary;
+            bottom: -1rem;
+            left: 2.3rem;
+            transform: translateX(-50%);
+
+            @include breakPoint(tablet) {
+                bottom: -1.2rem;
+            }
+        }
+    }
 }
 
 .project-pic {
-    background-image: url(../styles/assets/headshot.jpg);
-    background-size: cover;
+    background-image: url(../styles/assets/corona-placeholder.jpg);
+    background-size: 150%;
     background-position: center;
     position: relative;
     width: 100%;
+    transition: 2s;
     height: 300px;
 
     &:hover {
         .overlay {
             opacity: 1;
         }
+
+        background-size: 170%;
     }
 
     @include breakPoint(desktop) {
         width: 40%;
         flex-shrink: 0;
+        height: auto;
     }
 
     .overlay {
@@ -58,4 +99,9 @@
             opacity: 0;
         }
     }
+}
+
+.skills-used {
+    @include accent-regular;
+    font-style: italic;
 }

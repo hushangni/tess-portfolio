@@ -67,9 +67,25 @@
 
     h2 {
         font-size: 3rem;
-        margin: 1rem 0;
+        margin: 1.5rem 0;
+        position: relative;
         @include breakPoint(tablet) {
             margin: 2.5rem 0;
+        }
+
+        &::after {
+            content: "";
+            height: 2px;
+            width: 50px;
+            position: absolute;
+            background: $primary;
+            bottom: -1.1rem;
+            left: 50%;
+            transform: translateX(-50%);
+
+            @include breakPoint(tablet) {
+                bottom: -1.6rem;
+            }
         }
     }
 
