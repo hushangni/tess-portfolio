@@ -33,7 +33,9 @@ html {
   }
 }
 
-button {
+.button {
+  @include primary-medium;
+  font-size: 1.4rem;
   background: none;
   border: none;
   text-transform: uppercase;
@@ -44,6 +46,7 @@ button {
 }
 
 .dark-button {
+  @extend .button;
   background: $dark-accent;
   color: $white;
   border: 2px solid $dark-accent;
@@ -54,6 +57,7 @@ button {
 }
 
 .light-button {
+  @extend .button;
   color: $dark-accent;
   border: 2px solid $dark-accent;
   &:hover {

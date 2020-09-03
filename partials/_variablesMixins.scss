@@ -4,7 +4,7 @@
 $black: #282d4c;
 $white: #ffffff;
 
-$primary: #fcd47c;
+$primary: #f8ca67;
 $secondary: #b2c8ff;
 
 $light-cool: #d4dcf2;
@@ -50,7 +50,6 @@ $dark-accent: #070A62;
   font-weight: 500;
 }
 
-
 /**************/
 /*** Mixins ***/
 /**************/
@@ -70,7 +69,7 @@ $dark-accent: #070A62;
 // breakPoint(point)
 @mixin breakPoint($point) {
   @if $point == desktop {
-    @media (min-width: 1080px) { @content; }
+    @media (min-width: 900px) { @content; }
   }
   @else if $point == tablet {
     @media (min-width: 736px) { @content; }
@@ -80,6 +79,11 @@ $dark-accent: #070A62;
   }
 }
 
+.desktop-only {
+  @media (max-width: 900px) {
+    display: none;
+  }
+}
 
 /******************/
 /*** Animations ***/
