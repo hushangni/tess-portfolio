@@ -1,0 +1,45 @@
+.skills-flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.skills-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.skill {
+    @include accent-medium();
+    margin-right: 3rem;
+}
+
+.skills-section {
+    width: 100%;
+    margin: 2rem 0;
+}
+
+.skill-heading {
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 4rem;
+        height: 1rem;
+        background: $primary;
+        z-index: -1;
+        bottom: 1px;
+        left: -5px;
+    }
+}
+
+.equipment-skills{
+    width: 55%;
+}
+
+.language-skills {
+    width: 30%;
+}

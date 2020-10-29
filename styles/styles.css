@@ -295,6 +295,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .wrapper {
   max-width: 1000px;
   width: 80%;
@@ -365,6 +369,7 @@ body {
   font-weight: 300;
   font-size: 16px;
   font-size: 1.6rem;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -766,6 +771,62 @@ h3 {
   font-family: 'Playfair Display', serif;
   font-weight: 400;
   font-style: italic;
+}
+
+.skills-flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.skills-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.skill {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  margin-right: 3rem;
+}
+
+.skills-section {
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.skill-heading {
+  position: relative;
+}
+
+.skill-heading::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 4rem;
+  height: 1rem;
+  background: #f8ca67;
+  z-index: -1;
+  bottom: 1px;
+  left: -5px;
+}
+
+.equipment-skills {
+  width: 55%;
+}
+
+.language-skills {
+  width: 30%;
 }
 
 footer {
