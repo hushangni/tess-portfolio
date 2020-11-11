@@ -1,0 +1,61 @@
+.contact {
+    background: $dark-accent;
+    color: $white;
+
+    .content {
+        background: $white;
+        color: $black;
+        padding: 3rem 2rem 3rem;
+    }
+
+    h4 {
+        margin: 1rem 0;
+    }
+}
+
+
+.email-link {
+    @include accent-bold();
+    font-size: 2rem;
+    transition: 1s;
+    font-weight: bold;
+    color: $dark-accent;
+
+    &:before {
+        transition: 1s ease-in;
+    }
+    
+
+    .fa-paper-plane {
+        color: $primary;
+    }
+
+    &:hover, 
+    &:focus {
+        color: lighten($dark-accent, 20%);
+        
+
+        .fa-paper-plane {
+            animation: wiggle 3s infinite;
+        }
+
+        &::before {
+            width: 13rem;
+            height: 2rem;
+        }
+    }
+}
+
+h4.skill-heading {
+    font-size: 2rem;
+}
+
+.social-row {
+    display: flex;
+    align-items: center;
+
+    .social-nav {
+        padding-left: 0;
+        border: 0;
+    }
+}

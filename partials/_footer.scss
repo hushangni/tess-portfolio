@@ -1,4 +1,7 @@
 footer {
-    height: 100vh;
-    background: #cad;
+    padding: 2rem;
+    background: $white;
+    color: $black;
+    text-align: center;
+    @include fontSize(13)
 }

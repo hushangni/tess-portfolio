@@ -12,6 +12,7 @@ img {
 a {
   text-decoration: none;
   color: inherit;
+  display: inline-block;
 }
 
 html {
@@ -30,10 +31,10 @@ body {
 }
 
 .main-section {
-  padding: 2rem 0;
+  padding: 3rem 0 8rem;
 
   @include breakPoint(desktop) {
-    padding: 4rem 0;
+    padding: 4rem 0 8rem;
   }
 }
 

@@ -7,15 +7,12 @@
   height: 38px;
   cursor: pointer;
   transition: 0.5s;
+  z-index: 100;
 
   &:hover,
   &:focus {
     transform: rotate(45deg);
     filter: drop-shadow(3px 3px 4px $medium-neutral);
-  }
-
-  @include breakPoint(desktop) {
-    display: none;
   }
 }
 
@@ -24,15 +21,29 @@
   right: 0;
   top: 105px;
   transition: 0.3s;
-  display: none;
+  transform: translateX(600px);
+  padding: 1rem;
+
+  li {
+    color: $white;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #070A62, -1px -1px 1px #070A62;
+    @include fontSize(20);
+    margin: 2rem;
+  }
 
   &.active {
-    background: salmon;
-
+    display: block;
+    z-index: 100;
+    background: $primary;
+    width: 100%;
+    transform: translateX(0);
   }
 
   ul {
     display: flex;
-    border: 1px solid $medium-warm;
+    justify-content: space-around;
+    flex-wrap: wrap;
   }
 }

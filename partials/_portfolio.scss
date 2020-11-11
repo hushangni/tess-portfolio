@@ -74,29 +74,47 @@
             }
         }
     }
+
+    p {
+        margin-bottom: 3rem;
+    }
 }
 
 .project-pic {
     background-image: url(../styles/assets/corona-placeholder.jpg);
-    background-size: 150%;
+    background-size: 175%;
     background-position: center;
     position: relative;
     width: 100%;
     transition: 2s;
     height: 300px;
 
+    &.ethical-dilemma {
+        background-image: url(../styles/assets/man-computer.png);
+    }
+
+    &.seneca-journalism {
+        background-image: url(../styles/assets/girl-writing.png);
+    }
+
     &:hover {
         .overlay {
             opacity: 1;
         }
 
-        background-size: 170%;
+        background-size: 180%;
     }
 
     @include breakPoint(desktop) {
         width: 40%;
         flex-shrink: 0;
         height: auto;
+
+        background-size: 200%;
+
+        &:hover {
+            background-size: 220%;
+        }
     }
 
     .overlay {
