@@ -346,6 +346,10 @@ body {
   overflow-x: hidden;
 }
 
+main {
+  overflow: hidden;
+}
+
 .wrapper {
   max-width: 1000px;
   width: 80%;
@@ -462,6 +466,10 @@ h3 {
           transform: rotate(45deg);
   -webkit-filter: drop-shadow(3px 3px 4px #d8a689);
           filter: drop-shadow(3px 3px 4px #d8a689);
+}
+
+* {
+  border: 1px solid red;
 }
 
 .overall-nav {

@@ -24,6 +24,10 @@ body {
   overflow-x: hidden;
 }
 
+main {
+  overflow: hidden;
+}
+
 .wrapper {
   max-width: 1000px;
   width: 80%;
