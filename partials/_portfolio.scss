@@ -83,7 +83,7 @@
 
 .project-pic {
     background-image: url(../styles/assets/corona-placeholder.jpg);
-    background-size: 175%;
+    background-size: 182%;
     background-position: center;
     position: relative;
     width: 100%;
@@ -103,7 +103,7 @@
             opacity: 1;
         }
 
-        background-size: 180%;
+        background-size: 195%;
     }
 
     @include breakPoint(desktop) {
