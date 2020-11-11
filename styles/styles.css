@@ -508,7 +508,8 @@ h3 {
   min-height: 100vh;
   text-align: center;
   color: #ffffff;
-  background: #070A62;
+  background: #b2c8ff;
+  background: linear-gradient(342deg, #b2c8ff 0%, #6977bc 22%, #3e4794 46%, #1c2175 71%, #070a62 100%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -681,8 +682,9 @@ h3 {
 }
 
 .portfolio {
-  background: #070A62;
   color: #ffffff;
+  background: #b2c8ff;
+  background: linear-gradient(342deg, #b2c8ff 0%, #6977bc 22%, #3e4794 46%, #1c2175 71%, #070a62 100%);
 }
 
 .project {
@@ -912,6 +914,8 @@ h3 {
 
 .contact {
   background: #070A62;
+  background: #b2c8ff;
+  background: linear-gradient(342deg, #b2c8ff 0%, #6977bc 22%, #3e4794 46%, #1c2175 71%, #070a62 100%);
   color: #ffffff;
 }
 

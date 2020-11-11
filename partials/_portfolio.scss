@@ -3,8 +3,9 @@
 }
 
 .portfolio {
-    background: $dark-accent;
     color: $white;
+    background: rgb(178,200,255);
+    background: linear-gradient(342deg, rgba(178,200,255,1) 0%, rgba(105,119,188,1) 22%, rgba(62,71,148,1) 46%, rgba(28,33,117,1) 71%, rgba(7,10,98,1) 100%);
 }
 
 .project {
