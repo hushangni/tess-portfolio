@@ -468,10 +468,6 @@ h3 {
           filter: drop-shadow(3px 3px 4px #d8a689);
 }
 
-* {
-  border: 1px solid red;
-}
-
 .overall-nav {
   position: fixed;
   right: 0;
